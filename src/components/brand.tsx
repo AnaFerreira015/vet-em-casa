@@ -1,5 +1,5 @@
-import mark from "@/assets/mark.png.asset.json";
-import logo from "@/assets/logo.png.asset.json";
+import mark from "@/assets/mark.png";
+import logo from "@/assets/logo.png";
 import { cn } from "@/lib/utils";
 
 export const VET_NAME = "Eduarda Nunes";
@@ -8,7 +8,7 @@ export const VET_CRMV = "CRMV-AL 02124";
 export function BrandMark({ className }: { className?: string }) {
   return (
     <span className={cn("flex items-center gap-3", className)}>
-      <img src={mark.url} alt="" className="h-12 w-12 shrink-0 rounded-full object-cover" />
+      <img src={mark} alt="" className="h-12 w-12 shrink-0 rounded-full object-cover" />
       <span className="flex min-w-0 flex-col leading-tight">
         <span className="truncate text-xl font-bold text-primary">{VET_NAME}</span>
         <span className="truncate text-xs font-semibold uppercase tracking-[0.2em] text-secondary">
@@ -22,7 +22,7 @@ export function BrandMark({ className }: { className?: string }) {
 export function FullLogo({ className }: { className?: string }) {
   return (
     <img
-      src={logo.url}
+      src={logo}
       alt={`${VET_NAME}, médica veterinária, ${VET_CRMV}`}
       className={cn("mx-auto w-56 rounded-3xl", className)}
     />
