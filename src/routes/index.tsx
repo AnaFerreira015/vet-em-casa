@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Stethoscope, Syringe, RotateCcw, Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { BrandMark, FullLogo, SiteFooter } from "@/components/brand";
+import { BrandMark, FullLogo, SiteFooter, VET_CRMV, VET_NAME } from "@/components/brand";
+import fotoEduarda from "@/assets/eduarda.webp";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -66,6 +67,36 @@ function Index() {
               </li>
             ))}
           </ul>
+        </section>
+        <section aria-labelledby="sobre" className="py-8">
+          <div className="grid items-center gap-8 rounded-3xl bg-card p-6 shadow-sm sm:p-10 md:grid-cols-[minmax(0,320px)_1fr]">
+            <img
+              src={fotoEduarda}
+              alt="Eduarda Nunes sorrindo, com jaleco branco da UFAL, segurando um filhote de cachorro preto, branco e caramelo."
+              width={720}
+              height={714}
+              loading="lazy"
+              className="mx-auto aspect-square w-full max-w-xs rounded-3xl object-cover"
+            />
+            <div>
+              <h2 id="sobre" className="text-2xl font-bold uppercase tracking-widest text-primary">
+                Sobre mim
+              </h2>
+              <p className="mt-4 text-lg">
+                Olá! Eu sou a {VET_NAME}, médica veterinária ({VET_CRMV}).
+              </p>
+              {/* Adicione aqui formação, especializações e tempo de experiência. */}
+              <p className="mt-3">
+                Atendo o seu pet no conforto da sua casa, onde ele fica mais tranquilo, sem o estresse do
+                transporte e da sala de espera. Também cuido dele como pet sitter quando você precisa viajar
+                ou passar o dia fora, seguindo a rotina de alimentação, medicação e passeios que você me passar.
+              </p>
+              <p className="mt-3">
+                Meu compromisso é um atendimento calmo e cuidadoso, com tempo para ouvir você e conhecer o
+                seu pet.
+              </p>
+            </div>
+          </div>
         </section>
       </main>
       <SiteFooter />
