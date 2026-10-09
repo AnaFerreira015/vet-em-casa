@@ -26,9 +26,9 @@ const services = [
 function Index() {
   return (
     <div className="flex min-h-dvh flex-col">
-      <header className="mx-auto flex w-full max-w-5xl items-center justify-between gap-4 px-4 py-4">
+      <header className="mx-auto flex w-full max-w-5xl items-center justify-between gap-2 px-4 py-4 sm:gap-4">
         <BrandMark />
-        <Button asChild variant="outline">
+        <Button asChild variant="outline" size="sm" className="shrink-0">
           <Link to="/auth">Entrar</Link>
         </Button>
       </header>

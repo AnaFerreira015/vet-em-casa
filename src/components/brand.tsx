@@ -7,11 +7,11 @@ export const VET_CRMV = "CRMV-AL 02124";
 
 export function BrandMark({ className }: { className?: string }) {
   return (
-    <span className={cn("flex items-center gap-3", className)}>
-      <img src={mark} alt="" className="h-12 w-12 shrink-0 rounded-full object-cover" />
+    <span className={cn("flex min-w-0 items-center gap-2 sm:gap-3", className)}>
+      <img src={mark} alt="" className="h-10 w-10 shrink-0 rounded-full object-cover sm:h-12 sm:w-12" />
       <span className="flex min-w-0 flex-col leading-tight">
-        <span className="truncate text-xl font-bold text-primary">{VET_NAME}</span>
-        <span className="truncate text-xs font-semibold uppercase tracking-[0.2em] text-secondary">
+        <span className="truncate text-lg font-bold text-primary sm:text-xl">{VET_NAME}</span>
+        <span className="truncate text-xs font-semibold uppercase tracking-[0.1em] text-secondary sm:tracking-[0.2em]">
           Médica veterinária
         </span>
       </span>
